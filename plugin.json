@@ -1,5 +1,5 @@
 {
-	"id": "nodebb-theme-lavender",
+	"id": "nodebb-theme-tron",
 	"library": "./lib/theme.js",
 	"hooks": [
 		{
@@ -10,7 +10,7 @@
 		"vendor": "static/vendor"
 	},
 	"scripts": [
-		"static/lib/lavender.js",
+		"static/lib/tron.js",
 		"static/lib/menu.js",
 		"static/lib/time.js",
 		"static/vendor/masonry.js",

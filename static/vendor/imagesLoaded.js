@@ -569,7 +569,7 @@ if ( typeof define === 'function' && define.amd ) {
 
   if ( typeof define === 'function' && define.amd ) {
     // AMD
-    define('lavender/imagesLoaded', [
+    define('tron/imagesLoaded', [
       'eventEmitter/EventEmitter',
       'eventie/eventie'
     ], function( EventEmitter, eventie ) {

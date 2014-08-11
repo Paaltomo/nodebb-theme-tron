@@ -2831,7 +2831,7 @@ function masonryDefinition( Outlayer, getSize ) {
 
 if ( typeof define === 'function' && define.amd ) {
   // AMD
-  define('lavender/masonry', [
+  define('tron/masonry', [
       'outlayer/outlayer',
       'get-size/get-size'
     ],
