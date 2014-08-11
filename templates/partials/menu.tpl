@@ -67,7 +67,7 @@
 								<a href="#" class="user-status" data-status="offline"><i class="fa fa-circle status offline"></i><span> [[global:invisible]]</span></a>
 							</li>
 						</ul>
-						  <a>Welcome, {user.username}</a>
+						  <span>Welcome, {user.username}</span>
 					</li>
 				</ul>
 				<!-- ELSE -->
@@ -106,7 +106,7 @@
 				<!-- ENDIF searchEnabled -->
 				<ul class="time pull-left">
 					<li>
-						<a><i class="fa fa-clock-o pull-left"></i> <div id="time"></div></a>
+						<span><i class="fa fa-clock-o pull-left"></i> <div id="time"></div></span>
 					</li>
 				</ul>
 				<ul id="main-nav" class="nav pull-left menu-slide">
