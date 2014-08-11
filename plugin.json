@@ -12,7 +12,6 @@
 	"scripts": [
 		"static/lib/tron.js",
 		"static/lib/menu.js",
-		"static/lib/time.js",
 		"static/vendor/masonry.js",
 		"static/vendor/imagesLoaded.js"
 	]
