@@ -1,0 +1,19 @@
+{
+	"id": "nodebb-theme-lavender",
+	"library": "./lib/theme.js",
+	"hooks": [
+		{
+			"hook": "filter:widgets.getAreas", "method": "defineWidgetAreas", "callbacked": true
+		}
+	],
+	"staticDirs": {
+		"vendor": "static/vendor"
+	},
+	"scripts": [
+		"static/lib/lavender.js",
+		"static/lib/menu.js",
+		"static/lib/time.js",
+		"static/vendor/masonry.js",
+		"static/vendor/imagesLoaded.js"
+	]
+}

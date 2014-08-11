@@ -1,0 +1,294 @@
+/* Fixes */
+
+html {
+  height: 100%;
+}
+
+body {
+	padding-top: 0px !important;
+	height: 100% !important;
+  min-height:100% !important;
+  background: url(http://subtlepatterns.com/patterns/brushed.png) repeat;
+}
+.main-nav {
+	position:relative!important;
+}
+.navbar-header {
+	width:100%;
+  list-style: none;
+}
+.navbar-brand {
+  width:100%;
+  text-align:center;
+}
+.image {
+  height: 19px;
+}
+.userimage {
+  height: 19px;
+}
+.home .icon {
+  margin-bottom: 0px !important;
+}
+
+/* Menu Slide */
+
+.menu-slide li a:hover {
+  padding-left:40px;
+    -webkit-transition: padding-left 1s cubic-bezier(0.080, 0.905, 0.040, 0.995);
+    -moz-transition: padding-left 1s cubic-bezier(0.080, 0.905, 0.040, 0.995);
+    -o-transition: padding-left 1s cubic-bezier(0.080, 0.905, 0.040, 0.995);
+    transition: padding-left 1s cubic-bezier(0.080, 0.905, 0.040, 0.995);
+}
+
+/* Menu */
+
+#site-wrapper {
+  position: relative;
+  width: 100%;
+  height:100%;
+}
+#site-canvas {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  padding-top:10px;
+  padding-left:30px;
+  
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  
+  -webkit-transition: 300ms ease all;
+  transition: 300ms ease all;
+ 
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.show-nav #site-canvas {
+  -webkit-transform: translateX(300px);
+  transform: translateX(300px);
+  
+  -webkit-transform: translate3d(300px, 0, 0);
+  transform: translate3d(300px, 0, 0);
+}
+#site-menu {
+  width: 300px;
+  height: auto !important;
+  min-height: 100%;
+  position: fixed;
+  left: -300px;
+  background: #222222;
+  padding: 15px;
+  margin-top:-10px!important;
+}
+.site-menu-top {
+  position:relative;
+  z-index:1;
+}
+.site-canvas-bottom {
+  z-index:auto;
+}
+.toggle-nav {
+	left:10px;
+	position: fixed;
+}
+.toggle-notifications {
+  left:4px;
+  position:fixed;
+  top:50px;
+}
+.toggle-chats {
+  left:4px;
+  position:fixed;
+  top:90px;
+}
+.menu-dropdown {
+  position:fixed;
+  z-index:1000;
+}
+.notifications {
+  position: fixed;
+  top:50px;
+  left:40px;
+}
+.chats {
+  position:fixed;
+  left:40px;
+  top:90px;
+}
+.loading {
+	left:4px;
+	top:110px;
+	position: fixed;
+	margin-top:20px;
+}
+.loggedin-nav {
+  width:100%;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  padding-left: 0; // Override default ul/ol
+  list-style: none;
+  &:extend(.clearfix all);
+}
+.userbar {
+	margin-right:8px;
+  width:auto !important;
+}
+#user-header-picture {
+	height:38px;
+  border-radius: 50%;
+}
+
+/* Admin Nav */
+
+.admin-nav {
+  margin-bottom: 0;
+  padding-left: 0; // Override default ul/ol
+  list-style: none;
+  &:extend(.clearfix all);
+
+  > li {
+    position: relative;
+    display: block;
+
+    > a {
+      position: relative;
+      display: block;
+      padding: @nav-link-padding;
+      &:hover,
+      &:focus {
+        text-decoration: none;
+        background-color: @nav-link-hover-bg;
+      }
+    }
+
+    // Disabled state sets text to gray and nukes hover/tab effects
+    &.disabled > a {
+      color: @nav-disabled-link-color;
+
+      &:hover,
+      &:focus {
+        color: @nav-disabled-link-hover-color;
+        text-decoration: none;
+        background-color: transparent;
+        cursor: not-allowed;
+      }
+    }
+  }
+
+  // Open dropdowns
+  .open > a {
+    &,
+    &:hover,
+    &:focus {
+      background-color: @nav-link-hover-bg;
+      border-color: @link-color;
+    }
+  }
+
+  // Nav dividers (deprecated with v3.0.1)
+  //
+  // This should have been removed in v3 with the dropping of `.nav-list`, but
+  // we missed it. We don't currently support this anywhere, but in the interest
+  // of maintaining backward compatibility in case you use it, it's deprecated.
+  .nav-divider {
+    .nav-divider();
+  }
+
+  // Prevent IE8 from misplacing imgs
+  //
+  // See https://github.com/h5bp/html5-boilerplate/issues/984#issuecomment-3985989
+  > li > a > img {
+    max-width: none;
+  }
+}
+.admin-navbar-header {
+  width:auto;
+}
+.adminfix {
+  margin-top:40px;
+}
+
+/* Slide Box */
+
+.slidewrapper {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%; 
+    margin-bottom:10px;
+}
+
+#slider {
+    position: absolute;
+    top: -100%;
+    width: 100%;
+    padding:20px;
+    height: inherit;
+    color: white;
+    transition: 0.6s;
+}
+
+.slidewrapper:hover #slider {
+    transition: 0.6s;
+    top: 0;
+}
+
+/* Searchbar */
+
+.searchicon {
+  right:12px;
+  top:15px;
+  position:absolute;
+}
+.widesearch {
+  width:300px !important;
+}
+.navbar-form {
+  padding: 0px!important;
+  border-top: 0px !important;
+  border-bottom: 0px !important;
+}
+.form-control {
+  background-color:#666;
+  border: 1px solid #666;
+  color:#999;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  transition: none;
+  -webkit-transition: none;
+}
+.time {
+  margin-top:15px;
+  padding-left:15px;
+  list-style:none;
+  font-size:12px;
+  color:#999;
+  width:300px;
+}
+
+/* Slide Categories */
+
+.slide-wrapper {
+    position:relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+#slide {
+    position:absolute;
+    top: -100%;
+    padding:15px;
+    width: 100%;
+    height: 100%;
+    transition: 1s;
+}
+
+.slide-wrapper:hover #slide {
+    transition: 1s;
+    top: 0;
+}

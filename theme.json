@@ -1,0 +1,8 @@
+{
+    "id": "nodebb-theme-tron",
+    "name": "Tron Theme for NodeBB",
+    "description": "A clean theme for NodeBB.",
+    "url": "https://www.github.com/Paaltomo/nodebb-theme-tron",
+    "screenshot": "screenshot.png",
+    "templates": "templates"
+}
