@@ -17,16 +17,6 @@
   		<script>__lt_ie_9__ = 1;</script>
 	<![endif]-->
 	<script>
-	function startTime() {
-	    var d = new Date(),
-    minutes = d.getMinutes().toString().length == 1 ? '0'+d.getMinutes() : d.getMinutes(),
-    hours = d.getHours().toString().length == 1 ? '0'+d.getHours() : d.getHours(),
-    ampm = d.getHours() >= 12 ? 'pm' : 'am',
-    months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
-    days = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
-	document.getElementById("time").innerHTML = 'It is currently '+days[d.getDay()]+' '+months[d.getMonth()]+' '+d.getDate()+' '+d.getFullYear()+' '+hours+':'+minutes+' '+ampm;
-}	</script>
-	<script>
 		var RELATIVE_PATH = "{relative_path}";
 	</script>
 	<script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
@@ -44,6 +34,27 @@
 			}
 		});
 	</script>
+		<script>
+	$(window).on('action:widgets.loaded', function() {
+	$('body').on('click',function(event){
+    if ($('#site-wrapper').hasClass('show-nav')) {
+        if (!$(event.target).is('#site-menu') && !$(event.target).parents("#site-menu").is("#site-menu") ) {
+            $('#site-wrapper').toggleClass('show-nav');
+        }            
+    }
+	});
+	});
+	</script>
+		<script>
+	function startTime() {
+	    var d = new Date(),
+    minutes = d.getMinutes().toString().length == 1 ? '0'+d.getMinutes() : d.getMinutes(),
+    hours = d.getHours().toString().length == 1 ? '0'+d.getHours() : d.getHours(),
+    ampm = d.getHours() >= 12 ? 'pm' : 'am',
+    months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
+    days = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+	document.getElementById("time").innerHTML = 'It is currently '+days[d.getDay()]+' '+months[d.getMonth()]+' '+d.getDate()+' '+d.getFullYear()+' '+hours+':'+minutes+' '+ampm;
+}	</script>
 
 	<!-- IF useCustomJS -->
 	{customJS}
@@ -58,7 +69,7 @@
 <div id="site-wrapper">
 		<div class="loading-bar"></div>
         
-        <div id="site-canvas">
+        <div id="site-canvas" style="background-image: url(/plugins/nodebb-theme-tron/images/bg.jpg); background-size: cover;">
         <div class="container site-menu-top">
       	 	<div id="site-menu">
 				<!-- IMPORT partials/menu.tpl -->
