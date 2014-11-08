@@ -71,7 +71,7 @@
 					</li>
 				</ul>
 				<!-- ELSE -->
-				<ul id="logged-out-menu main-nav" class="loggedin-nav nav pull-left">
+				<ul id="logged-out-menu main-nav" class="loggedin-nav nav pull-left menu-slide">
 					<!-- IF allowRegistration -->
 					<li>
 						<a href="{relative_path}/register">
